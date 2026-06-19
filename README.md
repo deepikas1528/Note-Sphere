@@ -87,7 +87,27 @@ npm install
 
 Make sure MongoDB is running on your computer before starting the backend server.
 
-### 3. Start the backend server
+### 3. Before running the application
+
+create a .env file inside the backend folder and add the following variables:
+
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_secret_key
+
+Example
+PORT=5000
+MONGO_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/notesphere
+JWT_SECRET=mysecretkey123
+
+### Replace the following values with your own:
+
+username → MongoDB Atlas username
+password → MongoDB Atlas password
+cluster0.xxxxx.mongodb.net → Your MongoDB Atlas cluster URL
+JWT_SECRET → Any secure secret key of your choice
+
+### 4. Start the backend server
 
 ```bash
 npm run dev
