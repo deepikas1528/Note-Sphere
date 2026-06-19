@@ -1,4 +1,4 @@
-const mongoose = require("../db/database").mongoose;
+const mongoose = require("../db/connection").mongoose;
 const { Schema, Types } = require("mongoose");
 
 const noteSchema = new Schema({
