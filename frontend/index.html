@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteSphere | Personal Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">Personal workspace</p>
+            <h1>NoteSphere</h1>
+            <p id="welcomeMessage">Plan, write, and organize your daily notes.</p>
+        </div>
+
+        <div class="header-actions">
+            <div class="font-picker">
+                <label for="fontSelect">App Font</label>
+                <select id="fontSelect">
+                    <option value="default">Default</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Pacifico">Pacifico</option>
+                    <option value="Lato">Lato</option>
+                    <option value="Playfair Display">Playfair Display</option>
+                    <option value="Comic Neue">Comic Neue</option>
+                    <option value="Fira Code">Fira Code</option>
+                </select>
+            </div>
+            <button id="showInstructionsBtn" class="secondary-btn">Guide</button>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="summary-section">
+            <div>
+                <p class="eyebrow">Today’s desk</p>
+                <h2>Dashboard</h2>
+                <p id="summaryText">A quick snapshot of notes, pinned ideas, and completed tasks.</p>
+            </div>
+            <div class="mini-stats">
+                <span id="totalNotesStat">0 notes</span>
+                <span id="pinnedNotesStat">0 pinned</span>
+                <span id="openTasksStat">0 open tasks</span>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2 id="formTitle">Create Note</h2>
+
+            <form id="noteForm">
+                <input type="hidden" id="noteId">
+
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Example: Bootcamp ideas">
+
+                <label for="content">Content</label>
+                <div class="editor-toolbar">
+                    <button type="button" id="ulBtn">• List</button>
+                    <button type="button" id="olBtn">1. List</button>
+                    <button type="button" id="checkBtn">☐ Task line</button>
+                    <button type="button" id="templateBtn">Template</button>
+                </div>
+                <textarea id="content" placeholder="Write your note here..."></textarea>
+                <p id="wordCounter" class="helper-text">0 words · 0 characters</p>
+
+                <div class="form-buttons">
+                    <button type="submit" id="saveBtn">Save</button>
+                    <button type="button" id="cancelBtn" class="secondary-btn">Cancel</button>
+                </div>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="notes-section">
+            <div class="notes-header">
+                <h2>Your Notes</h2>
+                <span id="noteCount">0 notes</span>
+            </div>
+
+            <div class="filter-row">
+                <input type="text" id="searchInput" placeholder="Search notes by title or content">
+                <select id="sortSelect" aria-label="Sort notes">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="title">Title A-Z</option>
+                    <option value="pinned">Pinned first</option>
+                </select>
+            </div>
+
+            <div id="notesContainer"></div>
+        </section>
+
+        <section class="todo-section">
+            <div class="todo-header">
+                <div>
+                    <p class="eyebrow">Checklist</p>
+                    <h2>Tasks</h2>
+                </div>
+                <span id="todoCount">0 tasks</span>
+            </div>
+
+            <form id="todoForm">
+                <input type="text" id="todoInput" placeholder="Add a task...">
+                <button type="submit">Add</button>
+            </form>
+
+            <div id="todosContainer"></div>
+            <div class="todo-actions">
+                <button id="deleteCompletedBtn" class="secondary-btn">Remove finished</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="notes.js"></script>
+</body>
+</html>

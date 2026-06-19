@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | NoteSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-card">
+        <p class="eyebrow">Start organizing</p>
+        <h1>Sign Up</h1>
+        <p class="subtitle">Create a profile to save private notes and personal tasks.</p>
+
+        <form id="registerForm">
+            <label for="name">Full name</label>
+            <input type="text" id="name" placeholder="Your full name">
+
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="you@example.com">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="At least 6 characters">
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p id="message"></p>
+
+        <p class="link-text">
+            Have an account?
+            <a href="login.html">Sign in</a>
+        </p>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

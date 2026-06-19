@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide |NoteSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-card instructions-card">
+        <p class="eyebrow">Quick guide</p>
+        <h1>How to Use NoteSphere</h1>
+        <p class="subtitle">A short guide for creating notes, lists, pins, and tasks.</p>
+
+        <div class="instruction-list">
+            <ul>
+                <li><strong>Create notes:</strong> Add a title and content, then click Save.</li>
+                <li><strong>Format ideas:</strong> Use bullet list, numbered list, task line, or template buttons while writing.</li>
+                <li><strong>Organize notes:</strong> Search by keyword, sort notes, or pin important notes to find them faster.</li>
+                <li><strong>Reuse notes:</strong> Click Copy to copy a note title and content to your clipboard.</li>
+                <li><strong>Track tasks:</strong> Add checklist items in the Tasks section and remove finished tasks when done.</li>
+            </ul>
+        </div>
+
+        <div class="auth-footer">
+            <button id="continueBtn">Continue to App</button>
+            <button id="logoutGuideBtn" class="secondary-btn">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        const continueBtn = document.getElementById("continueBtn");
+        const logoutGuideBtn = document.getElementById("logoutGuideBtn");
+
+        continueBtn.addEventListener("click", () => {
+            localStorage.setItem("hasSeenInstructions", "true");
+            window.location.href = "index.html";
+        });
+
+        logoutGuideBtn.addEventListener("click", () => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+            localStorage.removeItem("hasSeenInstructions");
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
