@@ -48,24 +48,31 @@ The goal of this project is to help users organize daily ideas, study notes, rem
 ## Folder Structure
 
 ```text
-memo-nest/
+Note-Sphere/
 ├── backend/
 │   ├── controllers/
+│   │   ├── authHandler.js
+│   │   └── noteHandler.js
 │   ├── db/
+│   │   └── connection.js
 │   ├── middleware/
+│   │   ├── errorManager.js
+│   │   └── verifyUser.js
 │   ├── models/
 │   ├── routes/
+│   │   ├── authRouter.js
+│   │   └── noteRouter.js
 │   ├── .env.example
 │   ├── package.json
 │   └── server.js
 ├── frontend/
-│   ├── auth.js
+│   ├── account.js
+│   ├── guide.html
 │   ├── index.html
-│   ├── instructions.html
 │   ├── login.html
-│   ├── notes.js
 │   ├── register.html
-│   └── style.css
+│   ├── style.css
+│   └── workspace.js
 └── README.md
 ```
 

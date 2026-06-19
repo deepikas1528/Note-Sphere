@@ -43,7 +43,7 @@ if (!token) {
 }
 
 if (token && !localStorage.getItem("hasSeenInstructions")) {
-    window.location.href = "instructions.html";
+    window.location.href = "guide.html";
 }
 
 if (user && welcomeMessage) {
@@ -82,7 +82,7 @@ if (fontSelect) {
 
 if (showInstructionsBtn) {
     showInstructionsBtn.addEventListener("click", () => {
-        window.location.href = "instructions.html";
+        window.location.href = "guide.html";
     });
 }
 

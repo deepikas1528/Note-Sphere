@@ -69,7 +69,7 @@ if (loginForm) {
 
             localStorage.setItem("token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
-            window.location.href = "instructions.html";
+            window.location.href = "guide.html";
         } catch (error) {
             showMessage("Unable to connect to server. Please start the backend server.", "error");
         }

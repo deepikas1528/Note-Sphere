@@ -1,12 +1,12 @@
 const express = require("express");
-const authMiddleware = require("../middleware/authMiddleware");
+const authMiddleware = require("../middleware/verifyUser");
 const {
     getAllNotes,
     getSingleNote,
     createNewNote,
     updateExistingNote,
     deleteExistingNote
-} = require("../controllers/noteController");
+} = require("../controllers/noteHandler");
 
 const router = express.Router();
 

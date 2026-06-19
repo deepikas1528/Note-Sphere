@@ -4,10 +4,10 @@ require("dotenv").config({ path: path.join(__dirname, ".env") });
 const express = require("express");
 const cors = require("cors");
 
-const { initializeDatabase } = require("./db/database");
-const authRoutes = require("./routes/authRoutes");
-const noteRoutes = require("./routes/noteRoutes");
-const errorHandler = require("./middleware/errorHandler");
+const { initializeDatabase } = require("./db/connection");
+const authRoutes = require("./routes/authRouter");
+const noteRoutes = require("./routes/noteRouter");
+const errorHandler = require("./middleware/errorManager");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
